@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.- Cascada y Especificidad</title>
+    <style>
+        /* El orden si importa en CSS (css lee el archivo de arriba asi abajo)*/
+
+        /*  | -- ESPECIFICIDAD -- |
+            10,000 | !important
+             1,000 | Estilos En Linea
+               100 | #Id
+                10 | Clases, Atributos y PseudoClases
+                 1 | Elementos y PseudoClases
+                 0 | Selector Ubiversal
+        */
+
+
+        /* Estas propiedades no las toma el css (simpre y cuando tenga o no tenga especiicidad) */
+        /* El elemento h1 tiene "poca" especificidad de (1) */
+        h1 {
+            color: red !important; /*Tine mayor mega especificidad (10,000)*/
+            font-size: 3rem;
+        }
+
+        /* Estas propiedades sin las toma el css (simpre y cuando tenga o no tenga especiicidad) */
+        /* El elemento h1 tiene "muy poca" especificidad de (1) */
+        h1 {
+            color: blue;
+            font-size: 4rem;
+        }
+
+        /* El id del h2 tiene mayor especificidad de (100) */
+        #idSegundo-H2 {
+            font-size: 3rem;
+            background-color: black;
+        }
+
+        /* La clase del h2 tiene "muy poca" especificidad de (10) */
+        .claseSegundoH2{
+            color: rgb(130, 224, 170);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <!-- Estilos en linea-->
+        <!-- Los estilos en linea tiene super mayor especificidad (1,000) -->
+        <h1 style="font-size: 100px;">Platzi</h1>
+        <h2 id="idSegundo-H2" class="claseSegundoH2">Master</h2>
+    </div>
+
+</body>
+
+</html>

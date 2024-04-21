@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.- PseudoClases y Seudo-Elementos</title>
+    <style>
+        p {
+            font-size: 3rem;
+            color: salmon; /*Cambia el color*/
+            cursor: pointer; /*Cambia el mouse por una manita*/
+        }
+
+        a {
+            font-size: 3rem;
+        }
+
+
+
+        /* Esta seudo-elementos permite poner la primera letra de color negro */
+        p::first-letter {
+            color: black;
+        }
+
+        /* Esta seudo-elementos permite poner antes (al inicio) un emoji con content: "" */
+        p::before {
+            content: "😀"; /*Agrega contenido*/
+        }
+
+        /* Esta seudo-elementos permite poner depues (al final) un emoji con content: "" */
+        p::after {
+            content: "🤖"; /*Agrega contenido*/
+        }
+
+        /* Esta seudoclase permite cambiar el color de las letras cuando pasa el 
+           raton por encima */
+        p:hover {
+            color: aqua;
+        }
+
+        /* Esta seudoclase permite cambiar el color de las letras para el segundo hijo  */
+        div p:nth-child(2) {
+            color: rgb(57, 233, 95);
+        }
+
+        /* Esta seudo-elementos permite cambiar el color del placeholder de una etiqueta input*/
+        ::placeholder {
+            color: skyblue;
+        }
+
+        a:link {
+            color: deepskyblue;
+        }
+
+        a:hover {
+            background: yellow;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p>Hola</p>
+    <div>
+        <p>Platzi</p>
+        <p>Master</p>
+        <p>Lo Mejor</p>
+    </div>
+
+    <input type="text" placeholder="name">
+    <div>
+        <a href="#">Nuvo Link</a>
+    </div>
+
+</body>
+
+</html>

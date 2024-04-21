@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.- Selectores 2</title>
+    <style>
+
+        /* Este selector permite aplicar todos los estilos a todo el documento html */
+        * {
+            background-color: papayawhip;
+        }
+
+        /* Este selector permite aplicar los estilos a todas las etiquetas P que esten
+           dentro de un Div */
+        div p {
+            background-color: black;
+            color: lime;
+        }
+
+        div span {
+            background-color: chartreuse;
+            color: black;
+        }
+
+        /* Este selector permite aplicar los estilos a todas las etiquetas div que sean hijos directos */
+        div > div {
+            background-color: plum;
+        }
+
+        .otro {
+            background: brown;
+        }
+
+        /* Este selector permite aplicar los estilos a todas las etiquetas Adyacentes (una etiqueta que
+           a lado de la otroa en este caso: la etiqueta div con section) */
+        div + section {
+            background-color: darkturquoise;
+        }
+
+        section + section {
+            background-color: darkturquoise;
+        }
+
+        /* Este selector permite aplicar los estilos a todas las etiquetas hermanas */
+        section ~ p {
+            background-color: black;
+            color: green;
+            width: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <p>1.- HTML y CSS</p>
+        <span>Mas etiquetas</span>
+    </div>
+    <div>
+        <p>2.- HTML y CSS</p>
+        <p>3.- HTML y CSS</p>
+    </div>
+
+    <div>
+        <div>
+            <p>4.- HTML y CSS</p>
+            <div class="otro">Otro Div Abajo del P</div>
+        </div>
+    </div>
+
+    <section>
+        Clase de selectores
+    </section>
+
+    <p>Nuevo parrafo 1</p>
+
+    <section>
+        Nuevo parrafo
+    </section>
+
+    <p>Nuevo parrafo 2</p>
+    
+</body>
+</html>
