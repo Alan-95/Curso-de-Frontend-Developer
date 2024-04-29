@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Clases en CSS</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        h1 {
+            text-align: center;
+            color: aliceblue;
+        }
+
+        div.contenedor {
+            border: 3px solid aliceblue;
+            width: 50%;
+            height: 20%;
+            margin: auto;
+            margin-bottom: 20px;
+            padding: 15px;
+            color: aqua;
+            font-size: 20px;
+        }
+
+        div.contenedor:hover {
+            background-color: rgb(27, 184, 236);
+            color: rgb(0, 0, 0);
+        }
+
+        div.contenedor.oculto > p.primer-parrafo {
+            display: none;
+        }
+
+        div.contenedor.oculto:hover > p.primer-parrafo {
+            display: block;
+            background-color: dodgerblue;
+            color: black;
+            padding: 15px;
+        }
+
+        div + div.contenedor.primer-parrafo {
+            margin: auto;
+
+        }
+
+        div.contenedor.primer-parrafo p:first-child {
+            font-variant: small-caps;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Psudo Clases en CSS</h1>
+    <div class="contenedor oculto">
+        Pasa por encima
+        <p class="primer-parrafo">Se muestra el parrafo</p>
+        <p>Siempre se visualiza el parrafo</p>
+    </div>
+
+    <div class="contenedor primer-parrafo">
+        <p>Primer parrafo|</p>
+        <p>Segundo Parrafo</p>
+    </div>
+</body>
+</html>

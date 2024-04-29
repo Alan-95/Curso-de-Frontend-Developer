@@ -1,0 +1,110 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0;
+    background-color: #B4C6A6;
+}
+header {
+    background-color: #66806A;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+header > h1 {
+    font-size: 2rem;
+    margin: 0;
+    display: inline-block;
+    font-family: 'Rowdies', cursive;
+    color: white;
+}
+header > img {
+    width: 50px;
+    margin-left: 30px;
+}
+form {
+    margin: 35px 5px 35px 5px;
+    padding: 20px;
+    text-align: center;
+}
+#searching {
+    width: 50px;
+    margin-right: 40px;
+    margin-top: 50px;
+}
+label {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+input {
+    border-radius: 20px;
+    padding: 15px;
+    border-color: #32502E;
+    height: 30px;
+    width: 350px;
+}
+::placeholder {
+    color: black;
+}
+#boton {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border-color: #32502E;
+}
+section img {
+    width: 400px;
+}
+section {
+    width: 400px;
+    margin: 0 auto;
+}
+section article {
+    background-color: #E7EAB5;
+    margin-bottom: 20px;
+    border-radius: 1rem;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+section article h2, section article p {
+    margin: 1rem;
+}
+section article h2::first-letter {
+    font-size: 40px;
+    color: white;
+
+}
+footer {
+    background-color:coral;
+    padding: 1rem;
+}
+footer a {
+    color: cornsilk;
+    font-size: 25px;
+    display: inline;
+}
+#inicio {
+    float: left;  
+}
+#contact_me {
+    float: right;
+}
+footer p {
+   text-align: center;
+}
+a:link {
+    color: cornsilk;
+}
+a:visited {
+    color: gainsboro;
+}
+a:hover {
+    color: royalblue;
+}
+a:active {
+    color: blue;
+}
+footer p:hover {
+    color: pink;
+}

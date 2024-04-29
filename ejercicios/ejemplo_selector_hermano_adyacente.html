@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Selector de Hermano</title>
+    <style>
+        /* Selector de Hermano Siguiente, esto quiere decir que las etiquetas deben de estar al mismo nivel
+            (No se aplicara los estilos si no esta la etiqueta a lado) */
+        /* Selecciona el elemento <p> que es el hermano inmediatamente siguiente de un <h2> */
+        .container h2 + p {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* CSS */
+        /* Estilo aplicado al primer párrafo que sigue inmediatamente a un elemento <h2> */
+            h2 + p {
+            color: blue;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Título</h2>
+        <p>Este párrafo será seleccionado por el selector de hermano adyacente.</p>
+        <p>Este párrafo no será seleccionado.</p>
+        <h2>Otro Título</h2>
+        <p>Este párrafo tampoco será seleccionado.</p>
+      </div>
+
+      <section>
+        <h2>Título 1</h2>
+        <p>Este párrafo sigue inmediatamente al título 1, por lo tanto, se aplica el estilo.</p>
+        <div>
+            <h2>Título 2</h2>
+            <p>Este párrafo no sigue inmediatamente al título 2, por lo tanto, no se aplica el estilo.</p>
+        </div>
+        <p>Este párrafo no sigue inmediatamente a ningún título, por lo tanto, no se aplica el estilo.</p>
+
+      </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Selector de Descendiente</title>
+    <style>
+        /* CSS */
+        /* Estilo aplicado a todos los elementos <p> que son descendientes directos o indirectos de un elemento <div> */
+        /* Por ejemplo: todas las etiquetas "p" que esten dentro de un "div" sin importar si estan dentro de otras
+           Etiquetas tomaran los estilos establecidos por este tipo de selector */    
+        div p {
+            color: rgb(255, 0, 0);
+        }
+
+        /* La etiqueta "p" es descendiente de la etiqueta "section" apesar de que hay un etiqueta "article" que
+        contiene la etiqueta "p" */
+        section p {
+            color: rgb(127, 170, 255);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Este párrafo es hijo directo de un div y tambien es descenciente de div</p>
+        <div>
+            <p>Este párrafo es descendiente de un div pero no es hijo directo.</p>
+        </div>
+        <section>
+            <article>
+                <p>Nuevo parrafo</p>
+            </article>
+        </section>
+    </div>
+    <p>Este párrafo no es descendiente directo de un div.</p>
+</body>
+</html>

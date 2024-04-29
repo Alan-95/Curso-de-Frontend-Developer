@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Selector de Hermano General</title>
+    <style>
+        /* Selector General de Hermanos, esto quiere decir que se aplicara los estilos a todas las etiquetas
+        que sean hermanos directamente o indirectamente siempre y cuando sean hermanos (que esten al mismo nivel) */
+        /* Estilo aplicado a todos los párrafos que son hermanos posteriores de un elemento <h2> */
+        h2 ~ p {
+            color: red;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <p>Este párrafo también es hermano posterior de un título 1, por lo tanto, se aplica el estilo.</p>
+    <h2>Título 1</h2>
+    <p>Este párrafo es hermano posterior de un título 1, por lo tanto, se aplica el estilo.</p>
+    <p>Este párrafo también es hermano posterior de un título 1, por lo tanto, se aplica el estilo.</p>
+    <div>
+        <h2>Título 2</h2>
+        <p>Este párrafo no es hermano posterior de un título 1, por lo tanto, no se aplica el estilo.</p>
+    </div>
+    <div>
+        <p>Este párrafo no es hermano posterior de ningún título, por lo tanto, no se aplica el estilo.</p>
+    </div>
+    <p>Este párrafo no es hermano posterior de ningún título, por lo tanto, no se aplica el estilo.</p>
+
+</body>
+</html>

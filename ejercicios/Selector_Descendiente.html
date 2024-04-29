@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            background-color: black;
+            color: aliceblue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div.conteiner{
+            font-size: 25px;
+            width: 80%;
+            height: 20%;
+            margin: auto;
+            margin-top: 30px;
+            border: 3px solid aliceblue;
+            padding: 15px;
+            color: springgreen;
+            text-align: center;
+        }
+
+        /* Selector Descendientes (en cualquier nivel interno) */
+        .descendiente p {
+            text-align: left;
+            background-color: darkturquoise;
+            color: black;
+            font-size: 20px;
+        }
+
+        /* Selector De Hijo Directo (Child) */
+        div > span {
+            font-size: 20px;
+        }
+
+        .hijo-directo > p {
+            background-color: rgb(244, 106, 240);
+            color: black;
+        }
+
+        /* Selector Adyacente (Hermano directo siguiente) */
+        div.hermano-adyacente + p{
+            margin-top: 30px;
+            background-color: greenyellow;
+            color: black;
+            border: 3px solid burlywood;
+            text-align: center;
+            text-decoration: double;
+        
+        }
+
+        div.hermano-general {
+            border: 3px solid aliceblue;
+
+        }
+
+        /* Selector de Hermano General */
+        div.hermano-general ~ p {
+            background-color: aqua;
+            color: black;
+            font-size: 20px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Selectores Combinados en CSS</h1>
+    <div class="conteiner descendiente">
+        Selector Descendientes (en cualquier nivel interno):
+        <span>
+            Esto quiere decir, que aplicara los estilos a todas las estiquetas "p"
+            que esten dentro del "div" independiente si son hijos directos o indirectos
+        </span>
+        <p>Primer Parrafo</p>
+        <p>Segundo Parrafo</p>
+        <section>
+            <p>Tercer Parrafo</p>
+        </section>
+    </div>
+
+    <div class="conteiner hijo-directo">
+        Selector De Hijo Directo (Child):
+        <span>
+            Esto quiere decir, que aplicara los estilos a todas las estiquetas "p"
+            que esten dentro del "div" que sean hijos directos
+        </span>
+        <p>Primer Parrafo</p>
+        <p>Segundo Parrafo</p>
+        <section>
+            <!-- La etiqueta "p" no tiene el background-color porque no es hijo directo de "div"-->
+            <p>Tercer Parrafo</p>
+        </section>
+        <div>
+            <!-- La etiqueta "p" no tiene el background-color porque de "div" no tiene la clase 
+                del "div" padre que es "hijo-directo" "-->
+            <p>Cuarto Parrafo</p>
+        </div>
+        <p>Quinto Parrafo</p>
+    </div>
+
+    <div class="conteiner hermano-adyacente">
+        Selector Adyacente (Hermano directo siguiente):
+        <span>
+            Se aplicaran los estilos a todas las etiquetas "p" que sean
+            hermano directo de "div" (que esten al mismo nivel)
+        </span>
+        <section>
+            <div>
+                <p>Primer Parrafo</p>
+            </div>
+        </section>
+        <p>Segundo Parrafo</p>
+    </div>
+    <p>Tercer Parrafo</p>
+    <div>
+        <p>Cuarto Parrafo</p>
+    </div>
+    <p>Quinto Parrafo</p>
+
+    <div class="conteiner hermano-general">
+        Selector General de Hernamos (Hermanos siguientes):
+        <span>
+            Se aplicaran los estilos a todas las etiquetas "p"
+            que sean hermanos directos de "div"(que esten al mismo nivel)
+        </span>
+        <div>
+            <p>Primer Parrafo</p>
+        </div>
+    </div>
+    <p>Segundo Parrafo</p>
+    <div>
+        <p>Tercer Parrafo</p>
+    </div>
+    <p>Cuarto Parrafo</p>
+
+</body>
+</html>

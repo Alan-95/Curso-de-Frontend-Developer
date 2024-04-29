@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            background-color: black;
+            color: aliceblue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div.conteiner {
+            width: 80%;
+            height: 20%;
+            margin: auto;
+            border: 3px solid aliceblue;
+            padding: 15px;
+            color: springgreen;
+            text-align: center;
+        }
+
+        div p {
+            text-align: left;
+            background-color: darkturquoise;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Selectores Combinados en CSS</h1>
+    <div class="conteiner">
+        Selectores De Hijo Directo (Child):
+        <span>
+            Esto quiere decir, que aplicara los estilos a todas las estiquetas "p"
+            que esten dentro del "div" independiente si son hijos directos o indirectos
+        </span>
+        <p>Primer Parrafo</p>
+        <p>Segundo Parrafo</p>
+        <section>
+            <p>Tercer Parrafo</p>
+        </section>
+    </div>
+</body>
+</html>

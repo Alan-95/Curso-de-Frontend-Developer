@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Selector de Hijo</title>
+    <style>
+        /* Selector de hijo directo,  */
+        /* Estilo aplicado a todos los elementos <p> que son hijos directos de un elemento <div> */
+        div > p {
+            color: red;
+        }
+
+        /* Esto selecciona todos los elementos <p> que son hijos directos de un elemento con la clase "padre" */
+        .padre > p {
+            color: green;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- HTML -->
+    <section>
+        <div>
+            <p>Este párrafo es hijo directo de un div.</p>
+            <div>
+                <p>Este párrafo no es hijo directo de un div, por lo tanto, no se aplica el estilo.</p>
+            </div>
+            <section>
+                <div>
+                    <article>
+                        <p>Este parrofo no es hijo directo de un div</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <p>Este párrafo no es hijo directo de un div, por lo tanto, no se aplica el estilo.</p>
+    </section>
+
+    <section>
+        <div class="padre">
+            <p>Este es un párrafo hijo directo de la div con clase "padre".</p>
+            <div class="hija">
+              <p>Este es un párrafo nieto de la div con clase "padre".</p>
+            </div>
+            <p>Este es otro párrafo hijo directo de la div con clase "padre".</p>
+        </div>
+    </section>
+
+
+</body>
+</html>
