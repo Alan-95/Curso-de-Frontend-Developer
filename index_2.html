@@ -7,28 +7,63 @@
     <title>2.- Selectores 1</title>
     <style>
 
-        /* Este selector permite aplicar todos los estilos a todo el documento html*/
+        /* El Selector Universal, permite aplicar todos los estilos a todo el documento html */
         * {
             background-color: papayawhip;
         }
 
-        /* Este selector permite aplicar los estilos a las etiquetas html que tengan 
-           la etiqueta Div */
+        /* El Selector de Tipo o de Etiqueta (Nombre de la etiqueta), permite aplicar los 
+           estilos a las etiquetas html que tengan la etiqueta Div */
         div {
             background-color: cadetblue;
         }
 
-        /* Este selector permite aplicar los estilos a las etiquetas html que tangan la 
+        /* El Selector de Clase (Clase del elemento), permite aplicar los estilos a las etiquetas html que tangan la 
            clases titulo1 */
         .titulo1 {
             background-color: lightgreen;
         }
 
-        /* Este selector permite aplicar los estilos a las etiquetas html que tangan el 
+        /* El Selector de id (Id del elemento), permite aplicar los estilos a las etiquetas html que tangan el 
            id titulo2 */
         #titulo2 {
             background-color: hotpink;
         }
+
+        /* El Selector de [atributo], permite aplicar los estilos a las etiquetas html que tengan el atributo href */
+        [href]{
+            background-color: cornflowerblue;
+        }
+
+        /* El selecto de [Atributo=valor], permite aplicar los estilos las etiquetas html que tengan 
+           atributo href mas el valor (en este caso un enlace a google) */
+        [href="https://www.google.com.mx/?hl=es"]{
+            background-color: aqua;
+        }
+
+        [class="etiquetaH1"]{
+            background-color: dodgerblue;
+        }
+
+        /* El Selector de [Atributo^=valor] (el "^" busca al inicio la palabra dentro del valor), permite 
+           aplicar los estilos a las etiquetas html que empiecen con el valor especificado */
+        [class^="Hola"]{
+            background-color: darkturquoise;
+        }
+
+        /* El Selector de [Atributo*=valor] (el "*" busca dentro del valor la palabra independiente donde 
+           se encuentre al princio, en medio o al final ), permite aplicar los estilos a las etiquetas html 
+           que coincidan con el valor independiente donde se encuentre (al inicio, en medio o al final del valor) */
+        [href*="facebook"]{
+            background-color: lawngreen;
+        }
+
+        /* El Selector de [Atributo$=valor] (el "$" busca al final la palabra dentro del valor), permite 
+           aplicar los estilos a las etiquetas html al final del valor especificado */
+        [href$="maroon"]{
+            background-color:  maroon;
+        }
+
 
     </style>
 
@@ -39,6 +74,13 @@
     <div class="titulo1">Segundo Div</div>
     <div id="titulo2">Tercer Div:
         <a href="http://127.0.0.1:3000/index_1.html">Ir a la otro pagina</a>
+        <a href="https://www.google.com.mx/?hl=es">Ir a Google</a>
+        <a href="https://www.facebook.com/">Ir a Facebook</a>
+        <a href="https://www.youtube.com/maroon">Ir a Youtube</a>
+
+        <h1 class="etiquetaH1">Hola desde CSS</h1>
+        <div class="Hola Mundo">Nuevo Div</div>
+
     </div>
 </body>
 
